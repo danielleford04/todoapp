@@ -41,6 +41,10 @@
     text-decoration: line-through;
 }
 
+.loading img {
+    max-width:100%;
+}
+
 @media screen and (max-width: 480px) {
     .task-due-date {margin-left: 10px; float: none; display: inline-block}
 
