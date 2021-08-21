@@ -1,0 +1,42 @@
+.header {
+    background-color: #383E55;
+    width: 100%;
+    height: 50px;
+    font-size: 32px;
+    color: #CCCC00;
+    margin-bottom: 30px;
+}
+
+.header img {
+    margin-right: 10px;
+}
+
+.task-list {
+    width: 50%;
+    margin: auto;
+}
+
+.task-item {
+    margin: 5px;
+    padding: 5px 10px;
+    background-color: #F3F3F3;
+}
+
+.task-checkbox {
+    margin-right: 10px;
+}
+
+.task-due-date {
+    border: black solid 1px;
+    float: right;
+    padding: 0 5px;
+}
+
+.overdue-task {
+    background-color: #FECCCC;
+}
+
+.completed-task {
+    background-color: #CCFFCC;
+    text-decoration: line-through;
+}
