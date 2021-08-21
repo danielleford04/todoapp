@@ -10,9 +10,23 @@ const config = {
 
 export const FETCH_TASKS = "FETCH_TASKS";
 export const UPDATE_TASK = "UPDATE_TASK";
+export const SET_LOADING_TO_FALSE = "SET_LOADING_TO_FALSE";
+export const SET_LOADING_TO_TRUE = "SET_LOADING_TO_TRUE";
 
+export function setLoadingToFalse() {
+    return {
+        type: SET_LOADING_TO_FALSE,
+    };
+}
+
+export function setLoadingToTrue() {
+    return {
+        type: SET_LOADING_TO_TRUE,
+    };
+}
 
 export function fetchTasks() {
+    setLoadingToTrue();
     const request = axios.get(`${ROOT_URL}/get`, config);
 
     return {
@@ -21,8 +35,9 @@ export function fetchTasks() {
     };
 }
 
-export function updateTask(values, callback) {
-    const request = axios.patch(`${ROOT_URL}/patch/${values.task_id}`, values, config)
+export function updateTask(values) {
+    setLoadingToTrue();
+    const request = axios.patch(`${ROOT_URL}/patch/${values.task_id}`, values, config);
 
     return {
         type: UPDATE_TASK,

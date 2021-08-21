@@ -72,7 +72,7 @@ export default function(state = [], action) {
                 if (task.id !== updated_task_id) {
                     new_state.push(task)
                 } else {
-                    task.isComplete = !task.isComplete
+                    task.isComplete = !task.isComplete;
                     new_state.push(task)
                 }
             }
